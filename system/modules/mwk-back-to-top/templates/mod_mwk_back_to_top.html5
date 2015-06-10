@@ -1,0 +1,33 @@
+<div class="<?php echo $this->class; ?> "<?php echo $this->cssID; ?>>
+<a href="#" class="mwk-top <?php echo $this->backToTopButtonSize; ?> <?php echo $this->backToTopButtonRight; ?> <?php echo $this->backToTopButtonBottom; ?> <?php echo $this->backToTopButtonRadius; ?>"<?php echo $this->styleMod; ?>></a>
+</div>
+
+<script>
+
+    jQuery(document).ready(function($){
+
+        var offset = '<?php echo $this->backToOffset; ?>';
+        var offsetOpacity = '<?php echo $this->backToOffsetOpacity; ?>';
+        var scrollTopDuration = '<?php echo $this->backToScrollDuration; ?>';
+        var back2top = '.mwk-top';
+
+        //hide or show the "back to top" link
+        $(window).scroll(function(){
+            ( $(this).scrollTop() > offset ) ? $(back2top).addClass('mwk-is-visible') : $(back2top).removeClass('mwk-is-visible mwk-fade-out');
+            if( $(this).scrollTop() > offsetOpacity ) {
+                $(back2top).addClass('mwk-fade-out');
+            }
+        });
+
+        //smooth scroll to top
+        $(back2top).on('click', function(event){
+            event.preventDefault();
+            $('body,html').animate({
+                        scrollTop: 0
+                    }, scrollTopDuration
+            );
+        });
+
+    });
+
+</script>

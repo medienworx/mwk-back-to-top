@@ -1,0 +1,79 @@
+/* ======================
+ * Back to top
+ * ==================== */
+
+.mwk-top {
+    display: inline-block;
+    position: fixed;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    /* image replacement properties */
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    background: #0096d9 url(../img/mwk-arrow-top.svg) no-repeat center 50%;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+    -moz-transition: opacity .3s 0s, visibility 0s .3s;
+    transition: opacity .3s 0s, visibility 0s .3s;
+    border: none !important;
+}
+.mwk-top.mwk-is-visible, .mwk-top.mwk-fade-out, .no-touch .mwk-top:hover {
+    -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+    -moz-transition: opacity .3s 0s, visibility 0s 0s;
+    transition: opacity .3s 0s, visibility 0s 0s;
+}
+.mwk-top.mwk-is-visible {
+  /* the button becomes visible */
+  visibility: visible;
+  opacity: 1;
+}
+.mwk-top.mwk-fade-out {
+  /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+  opacity: .5;
+}
+.no-touch .mwk-top:hover {
+  background-color: #0096d9;
+  opacity: 1;
+}
+
+.-btn-size-40 {width:40px; height: 40px;}
+.-btn-size-50 {width:50px; height: 50px;}
+.-btn-size-60 {width:60px; height: 60px;}
+.-btn-size-70 {width:70px; height: 70px;}
+.-btn-size-80 {width:80px; height: 80px;}
+.-btn-size-90 {width:90px; height: 90px;}
+.-btn-size-100 {width:100px; height: 100px;}
+
+.-btn-right-10 {right:10px;}
+.-btn-right-20 {right:20px;}
+.-btn-right-30 {right:30px;}
+.-btn-right-40 {right:40px;}
+.-btn-right-50 {right:50px;}
+.-btn-right-60 {right:60px;}
+.-btn-right-70 {right:70px;}
+.-btn-right-80 {right:80px;}
+.-btn-right-90 {right:90px;}
+.-btn-right-100 {right:100px;}
+
+.-btn-bottom-10 {bottom:10px;}
+.-btn-bottom-20 {bottom:20px;}
+.-btn-bottom-30 {bottom:30px;}
+.-btn-bottom-40 {bottom:40px;}
+.-btn-bottom-50 {bottom:50px;}
+.-btn-bottom-60 {bottom:60px;}
+.-btn-bottom-70 {bottom:70px;}
+.-btn-bottom-80 {bottom:80px;}
+.-btn-bottom-90 {bottom:90px;}
+.-btn-bottom-100 {bottom:100px;}
+
+.-btn-radius-10 {border-radius:10%;}
+.-btn-radius-20 {border-radius:20%;}
+.-btn-radius-30 {border-radius:30%;}
+.-btn-radius-40 {border-radius:40%;}
+.-btn-radius-50 {border-radius:50%;}
+.-btn-radius-60 {border-radius:60%;}
+.-btn-radius-70 {border-radius:70%;}
+.-btn-radius-80 {border-radius:80%;}
+.-btn-radius-90 {border-radius:90%;}
+.-btn-radius-100 {border-radius:100%;}
